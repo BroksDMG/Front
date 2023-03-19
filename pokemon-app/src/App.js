@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useEffect, useState } from "react";
+import Pokemoncard from "./componetns/Pokemoncard.js";
+useEffect(()=>{
+  fetch
+})
 function App() {
+  const [images,setImages] = useState([]);
+  const [isLoading,setIsLoading] =useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=" w-full h-screen p-10 flex ">
+       <div className="w-full  flex flex-wrap">
+       <Pokemoncard />
+          
+       </div>
     </div>
   );
 }
