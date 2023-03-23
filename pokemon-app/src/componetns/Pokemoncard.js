@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
-const Pokemoncard = ({images}) => {
-    console.log(images);
+const Pokemoncard = ({image}) => {
+  console.log(image);
   return (
     <div className=" w-min h-min  bg-gray-300 shadow-2xl mx-2 my-2 rounded-lg cursor-pointer hover:-translate-y-1 ">
           <div className="w-full">
             <img className=" object-contain w-full  " 
-            src={images} alt="test"
+            src={image.sprites.front_default} alt="test"
             />
           </div>
         
