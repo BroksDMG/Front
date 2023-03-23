@@ -7,11 +7,10 @@ function App() {
   const [isLoading,setIsLoading] =useState(true);
 
   useEffect(()=>{
-    fetch(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=0`)
+    fetch(`https://pokeapi.co/api/v2/pokemon?limit=9&offset=0`)
     .then(res=>res.json())
     .then(data => {
       // setPokemons(data.results.names)
-      setIsLoading(false);
       // console.log(pokemons);
       const imagesArray=[];
       data.results.forEach(e => {
@@ -20,6 +19,8 @@ function App() {
       .then(data=>{
         imagesArray.push(data)
         setImages(imagesArray);
+        setIsLoading(false);
+
 
       })
       .catch(err=>console.log(err))
@@ -33,7 +34,7 @@ function App() {
       {isLoading? <h1 className="text-6xl text-center mx-auto mt-32"> Is Loading</h1>
       :<div className="w-full  flex flex-wrap">
        {images.map(image => 
-         <Pokemoncard  image={image}/>
+         <Pokemoncard key={image.id} image={image}/>
         // console.log(image.sprites);
        )}
        
