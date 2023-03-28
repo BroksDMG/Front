@@ -23,9 +23,13 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+  const addExpanseHandler=(expanse)=>{
+    console.log('In App.js');
+    console.log(expanse);
+  }
   return (
     <div className=" bg-neutral-700 h-screen flex flex-col justify-center items-center">
-      <NewExpense/>
+      <NewExpense onAddExpenseData={addExpanseHandler}/>
       <Expenses items={expenses}/>
     </div>
   );
