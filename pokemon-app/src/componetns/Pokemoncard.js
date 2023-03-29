@@ -1,18 +1,16 @@
-import React, {useState}from 'react'
+import React from 'react'
 
 const Pokemoncard = ({image}) => {
-  console.log(image.types);
-  // const [types,setTypes]=useState([])
-  // setTypes(...[image.types]);
+  
   return (
-    <div className=" w-min h-min  bg-gray-300 shadow-2xl mx-2 my-2 rounded-lg cursor-pointer hover:-translate-y-1 ">
-          <div className="w-full">
+    <div className=" w-min h-min   shadow-2xl  cursor-pointer  rounded-b-lg hover:-translate-y-1 mx-3">
+          <div className="w-full bg-gray-300 rounded-t-lg">
             <img className=" object-contain w-full  " 
             src={image.sprites.front_default} alt="test"
             />
           </div>
         
-          <div className=" w-48 px-5 py-5 flex flex-col">
+          <div className=" w-48 px-5 py-5 flex flex-col bg-slate-100 rounded-b-lg">
           <ul className="">
             <li className=""> 
             <strong>Name: </strong>
