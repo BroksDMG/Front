@@ -1,5 +1,5 @@
 import React from 'react'
-import Pokemoncard from './PokemonCard'
+import PokemonCard from './PokemonCard'
 function PokemonContainer(props) {
   return (
     <div>
@@ -8,7 +8,7 @@ function PokemonContainer(props) {
         p-3
       ">
        {props.images.map(image => 
-         <Pokemoncard key={image.id} image={image}/>
+         <PokemonCard key={image.id} image={image}/>
         // console.log(image.sprites);
        )}
         </div>}

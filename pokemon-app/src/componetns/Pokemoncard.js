@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Pokemoncard = ({image}) => {
+const PokemonCard = ({image}) => {
   
   return (
     <div className=" w-min h-min   shadow-2xl  cursor-pointer  rounded-b-lg hover:-translate-y-1 mx-3">
@@ -31,4 +31,4 @@ const Pokemoncard = ({image}) => {
   )
 }
 
-export default Pokemoncard
+export default PokemonCard
