@@ -3,7 +3,7 @@ const router= express.Router();
 const {getGoals,setGoals,updateGoals,deleteGoals}=require('../controllers/goalController')
 
 router.route('/').get(getGoals).post(setGoals);
-router.route('/:id').put(setGoals).delete(deleteGoals);
+router.route('/:id').delete(deleteGoals).put(updateGoals);
 
 router.get('/',getGoals);
 router.post('/',setGoals)
